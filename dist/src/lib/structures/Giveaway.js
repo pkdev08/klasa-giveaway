@@ -20,11 +20,6 @@ class Giveaway {
     get client() {
         return this.manager.client;
     }
-    get guildID() {
-        /*var _a;
-        return ((_a = this.message) === null || _a === void 0 ? void 0 : _a.guild).id;*/
-        return this.message.guild.id;
-    }
     get options() {
         return this.client.options.giveaway;
     }
