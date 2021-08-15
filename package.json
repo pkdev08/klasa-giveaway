@@ -1,0 +1,79 @@
+{
+  "_from": "github:ImmortalSnake/klasa-giveaway",
+  "_id": "klasa-giveaway@1.3.0",
+  "_inBundle": false,
+  "_integrity": "",
+  "_location": "/klasa-giveaway",
+  "_phantomChildren": {},
+  "_requested": {
+    "type": "git",
+    "raw": "ImmortalSnake/klasa-giveaway",
+    "rawSpec": "ImmortalSnake/klasa-giveaway",
+    "saveSpec": "github:ImmortalSnake/klasa-giveaway",
+    "fetchSpec": null,
+    "gitCommittish": null
+  },
+  "_requiredBy": [
+    "#USER",
+    "/"
+  ],
+  "_resolved": "github:ImmortalSnake/klasa-giveaway#8ebd12de6db93b64d3cffdc2b802f9bdf3065d32",
+  "_spec": "ImmortalSnake/klasa-giveaway",
+  "_where": "/home/user/src2",
+  "author": {
+    "name": "ImmortalSnake"
+  },
+  "bugs": {
+    "url": "https://github.com/ImmortalSnake/klasa-giveaway/issues"
+  },
+  "bundleDependencies": false,
+  "dependencies": {},
+  "deprecated": false,
+  "description": "A discord giveaway plugin for klasa",
+  "devDependencies": {
+    "@types/node": "^14.0.14",
+    "@types/ws": "^7.2.5",
+    "@typescript-eslint/eslint-plugin": "^3.4.0",
+    "@typescript-eslint/parser": "^3.4.0",
+    "discord.js": "^12.2.0",
+    "eslint": "^7.3.1",
+    "eslint-config-klasa": "github:dirigeants/klasa-lint",
+    "klasa": "^0.5.0",
+    "typedoc": "^0.17.7",
+    "typescript": "^3.9.5"
+  },
+  "engines": {
+    "node": ">=12",
+    "npm": "*"
+  },
+  "files": [
+    "dist/src/",
+    "README.md",
+    "LICENSE"
+  ],
+  "homepage": "https://github.com/ImmortalSnake/klasa-giveaway",
+  "keywords": [
+    "klasa",
+    "Discord",
+    "giveaway"
+  ],
+  "license": "MIT",
+  "main": "dist/src/index.js",
+  "name": "klasa-giveaway",
+  "peerDependencies": {
+    "discord.js": "^12.2.0",
+    "klasa": "^0.5.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ImmortalSnake/klasa-giveaway.git"
+  },
+  "scripts": {
+    "build": "tsc -p .",
+    "lint": "eslint src/** --fix",
+    "start": "node dist/test/index.js",
+    "test": "eslint src/**"
+  },
+  "types": "dist/src/index.d.ts",
+  "version": "1.3.0"
+}
