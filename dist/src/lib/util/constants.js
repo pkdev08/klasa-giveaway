@@ -23,13 +23,13 @@ exports.OPTIONS = {
 function runMessage(giveaway, language) {
     return {
         content: language.get('GIVEAWAY_CREATE'),
-        embed: new discord_js_1.MessageEmbed()
+        embeds: [new discord_js_1.MessageEmbed()
             .setTitle(giveaway.title)
             .setColor('#42f54e')
             .setDescription(language.get('GIVEAWAY_DESCRIPTION', giveaway.winnerCount, giveaway.endsAt, giveaway.author))
             .setFooter(language.get('ENDS_AT'))
             .setTimestamp(giveaway.endsAt)
-    };
+        ]};
 }
 async function finishMessage(giveaway, winners, msg) {
     const embed = new discord_js_1.MessageEmbed()
@@ -37,10 +37,10 @@ async function finishMessage(giveaway, winners, msg) {
         .setFooter(msg.language.get('ENDED_AT'))
         .setTimestamp();
     if (winners.length < giveaway.winnerCount) {
-        return msg.edit(msg.language.get('GIVEAWAY_END'), embed
-            .setDescription(msg.language.get('NOT_ENOUGH_REACTIONS', giveaway.winnerCount)));
+        return msg.edit({ content: msg.language.get('GIVEAWAY_END'), embeds: [embed
+            .setDescription(msg.language.get('NOT_ENOUGH_REACTIONS', giveaway.winnerCount))]});
     }
-    await msg.edit(msg.language.get('GIVEAWAY_END'), embed
-        .setDescription(`**Winner: ${winners.map(us => us.toString()).join(', ')}**`));
+    await msg.edit({ content: msg.language.get('GIVEAWAY_END'), embeds: [embed
+        .setDescription(`**Winner: ${winners.map(us => us.toString()).join(', ')}**`)]});
     return msg.channel.send(msg.language.get('GIVEAWAY_WON', winners, giveaway.title, giveaway.message.url));
 }
