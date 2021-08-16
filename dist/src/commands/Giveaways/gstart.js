@@ -28,6 +28,10 @@ Example usage: \`.gstart 5m Awesome T-Shirt\``)
     }
     async run(msg, [time, winnerCount, title]) {
         if (!winnerCount) winnerCount = 1;
+        const giveaways = this.client.giveawayManager.running.filter(gv => gv.guildID === msg.guild.id);
+        const max = this.client.options.giveaway.maxGiveaways;
+        if (giveaways.length >= max)
+            throw msg.language.get('MAX_GIVEAWAYS', max);
         await this.client.giveawayManager.create(msg.channel, {
             endsAt: time.getTime(),
             author: msg.author.id,
