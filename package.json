@@ -38,7 +38,7 @@
     "discord.js": "github:discordjs/discord.js#f7eeccba4b7015496df811f10cc2da2b0fab0630",
     "eslint": "^7.3.1",
     "eslint-config-klasa": "github:dirigeants/klasa-lint",
-    "klasa": "^0.5.0",
+    "klasa": "github:pkdev08/klasa-v13",
     "typedoc": "^0.17.7",
     "typescript": "^3.9.5"
   },
@@ -62,7 +62,7 @@
   "name": "klasa-giveaway",
   "peerDependencies": {
     "discord.js": "github:discordjs/discord.js#f7eeccba4b7015496df811f10cc2da2b0fab0630",
-    "klasa": "^0.5.0"
+    "klasa": "github:pkdev08/klasa-v13"
   },
   "repository": {
     "type": "git",
