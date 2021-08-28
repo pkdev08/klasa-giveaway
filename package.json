@@ -61,7 +61,7 @@
   "main": "dist/src/index.js",
   "name": "klasa-giveaway",
   "peerDependencies": {
-    "discord.js": "github:discordjs/discord.js#f7eeccba4b7015496df811f10cc2da2b0fab0630",
+    "discord.js": "github:pkdev08/discord.js",
     "klasa": "github:pkdev08/klasa-v13"
   },
   "repository": {
